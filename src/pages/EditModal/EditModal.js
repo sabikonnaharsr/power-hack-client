@@ -14,7 +14,7 @@ const EditModal = ({ data, setData }) => {
    const bilId = form.bilId.value;
     const billingData = { name, email, phone, amount, bilId };
 
-    fetch(`http://localhost:5000/update-billing/${data._id}`, {
+    fetch(`https://power-hack-server-psi.vercel.app/update-billing/${data._id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

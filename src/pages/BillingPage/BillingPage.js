@@ -7,13 +7,13 @@ const BillingPage = () => {
   const [billingDatas, setBillingDatas] = useState([]);
   const booking = {};
   useEffect(() => {
-    fetch("http://localhost:5000/billing-list")
+    fetch("https://power-hack-server-psi.vercel.app/billing-list")
       .then((res) => res.json())
       .then((data) => setBillingDatas(data));
   }, [billingDatas]);
 
   const handleDelete = (id) => {
-    fetch(`http://localhost:5000/delete-billing/${id}`,
+    fetch(`https://power-hack-server-psi.vercel.app/delete-billing/${id}`,
     {
       method: "DELETE"
     })

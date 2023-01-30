@@ -16,7 +16,7 @@ const Modal = ({ booking }) => {
     let bilId = Math.floor(Math.random() * 1000000 + 1);
     const billingData = { name, email, phone, amount, bilId };
 
-    fetch("http://localhost:5000/add-billing", {
+    fetch("https://power-hack-server-psi.vercel.app/add-billing", {
       method: "POST",
       headers: {
         "content-type": "application/json",
